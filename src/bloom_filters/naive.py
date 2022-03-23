@@ -93,4 +93,3 @@ if __name__ == '__main__':
   fp_test = bloom_filter.test(query_negative)
   print('Total false positive items:', sum(fp_test))
   print('False positive rate:', (sum(fp_test)*100./len(fp_test)))
-  
