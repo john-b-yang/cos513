@@ -3,6 +3,13 @@ import numpy as np
 import pandas as pd
 from naive import BloomFilter
 
+# Argparse Definitions
+parser = argparse.ArgumentParser()
+parser.add_argument('--data_path', action='store', dest="data_path", type=str, required=True, help="path of the dataset")
+parser.add_argument('--size_of_BF', action='store', dest="size", type=int, required=True, help="size of the bloom filter")
+parser.add_argument('--thres_max', action='store', dest="thres_max", type=float, required=True, help="Maximum threshold for positive samples")
+parser.add_argument('--thres_min', action='store', dest="thres_min", type=float, required=True, help="Minimum threshold for positive samples")
+
 class LearnedFilter:
   # Create Learned Bloom Filter
   def __init__(self, min_t, max_t, hash_len, neg_data, pos_data):
@@ -35,12 +42,6 @@ class LearnedFilter:
     # Set values
     self.thres_opt = thres_opt
     self.bloom_filter_opt = bloom_filter_opt
-
-parser = argparse.ArgumentParser()
-parser.add_argument('--data_path', action='store', dest="data_path", type=str, required=True, help="path of the dataset")
-parser.add_argument('--size_of_BF', action='store', dest="size", type=int, required=True, help="size of the bloom filter")
-parser.add_argument('--thres_max', action='store', dest="thres_max", type=float, required=True, help="Maximum threshold for positive samples")
-parser.add_argument('--thres_min', action='store', dest="thres_min", type=float, required=True, help="Minimum threshold for positive samples")
 
 if __name__ == '__main__':
   results = parser.parse_args()

@@ -8,6 +8,11 @@ import serialize
 from random import randint
 from sklearn.utils import murmurhash3_32
 
+# Argparse Definitions
+parser = argparse.ArgumentParser()
+parser.add_argument('--data_path', action='store', dest="data_path", type=str, required=True, help="path of the dataset")
+parser.add_argument('--size_of_BF', action='store', dest="hash_len", type=int, required=True, help="size of the bloom filter")
+
 # Hash function generator
 def hashfunc(m: int):
   ss = randint(1, 99999999)
@@ -67,12 +72,8 @@ class BloomFilter():
     return results
 
 if __name__ == '__main__':
-  parser = argparse.ArgumentParser()
-  parser.add_argument('--data_path', action='store', dest="data_path", type=str, required=True, help="path of the dataset")
-  parser.add_argument('--size_of_BF', action='store', dest="R_sum", type=int, required=True, help="size of the bloom filter")
-
   results = parser.parse_args()
-  DATA_PATH, R_sum = results.data_path, results.R_sum
+  DATA_PATH, hash_len = results.data_path, results.hash_len
 
   data = pd.read_csv(DATA_PATH)
 
@@ -85,7 +86,7 @@ if __name__ == '__main__':
   n = len(query)
 
   # Insert positive URLs into the bloom filter
-  bloom_filter = BloomFilter(n, R_sum)
+  bloom_filter = BloomFilter(n, hash_len)
   bloom_filter.insert(query)
 
   # Get urls of negative samples, test Bloom filter for existence
