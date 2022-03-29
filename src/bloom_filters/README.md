@@ -6,7 +6,7 @@ Bloom filters are meant to support insertion and look up of items similar to has
 ### Naive
 > `naive.py`
 > * `--size_of_BF`: Size of bloom filter (number of slots)
-> * `--data_path`: Relative path to dataset to run bloom filter on.
+> * `--data_path`: Relative path to dataset to run bloom filter on
 
 Implementation for original bloom filter. Generates (number of elements * storage size in number of bits) * 0.693 hash functions, which are used to set the positions within an array corresponding to the hashes to indicate existence. All full, detailed explanation is [here](https://freecontent.manning.com/all-about-bloom-filters/).
 
@@ -19,7 +19,7 @@ python3 naive.py --size_of_BF 100000 --data_path ../data/URL_data.csv
 Proposed in *The Case for Learned Index Structures (Kraska 2018)*
 > `learned.py`
 > * `--size_of_BF`: Size of bloom filter (number of slots)
-> * `--data_path`: Relative path to dataset to run bloom filter on.
+> * `--data_path`: Relative path to dataset to run bloom filter on
 > * `--thres_max`: Maximum threshold for positive samples
 > * `--thres_man`: Minimum threshold for negative samples
 
@@ -31,3 +31,26 @@ python3 learned.py --size_of_BF 100000 --data_path ../data/URL_data.csv --thres_
 ```
 
 ### Adaptive
+Proposed in *Adaptive Learned Bloom Filter (Ada-BF): Efficient Utilization of the Classifier (Dai 2020)*
+> `adaptive.py`
+> * `--size_of_BF`: Size of bloom filter (number of slots)
+> * `--data_path`: Relative path to data to run bloom filter on
+> * `--c_min`: Minimum ratio of the keys
+> * `--c_max`: Maximum ratio of the keys
+> * `--group_min`: Minimum number of groups
+> * `--group_min`: Maximum number of groups
+
+Implementation for adaptive bloom filter. This implementation builds upon the work of learned bloom filters. With the LBF, we split the approach to determining existing into two groups - one that is determined via classifier and another that is determined via `K` hash functions. With adaptive bloom filters, instead of just 2 groups, we split the data into `n` number of groups, where
+* The number of keys in each group is the same (determined by `c` ratio)
+* The thresholds bounding each group is adjusted so that the `c` ratio is upheld.
+* The number of hash functions used to determine existence for the members of each group is determined during training
+The purpose of the time is to introduce greater granularity and flexibility when it comes to mimicking the distribution of the dataset. This approach takes longer to train, but yields drastic improvements over the original learned bloom filter approach.
+
+**Example Run**
+```
+python3 adaptive.py --size_of_BF 100000 --data_path ../data/URL_data.csv --c_min 1.6 --c_max 2.5 --group_min 8 --group_max 12
+```
+
+### References
+* [COS 598D Assignment 4](https://github.com/yushansu/COS598D_Assignment4)
+* [Optimal num of hash functions](https://freecontent.manning.com/all-about-bloom-filters/)
