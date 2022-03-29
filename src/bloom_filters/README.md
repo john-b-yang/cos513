@@ -54,3 +54,6 @@ python3 adaptive.py --size_of_BF 100000 --data_path ../data/URL_data.csv --c_min
 ### References
 * [COS 598D Assignment 4](https://github.com/yushansu/COS598D_Assignment4)
 * [Optimal num of hash functions](https://freecontent.manning.com/all-about-bloom-filters/)
+* [The Case for Learned Index Structures](https://arxiv.org/abs/1712.01208)
+* [Adaptive Learned Bloom Filter](https://openreview.net/pdf?id=rJlNKCNtPB)
+* [Optimizing Learned Bloom Filteres by Sandwiching](https://www.arxiv-vanity.com/papers/1803.01474/)

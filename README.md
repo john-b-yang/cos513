@@ -5,13 +5,13 @@ This repository contains the code for the final project I submitted for COS 513.
 
 ### Directory Layout
 
-.
-├── abstract.md             # Project Abstract
-├── journal.md              # Record of progress thru-out semester
-├── journal.md              # Record of progress thru-out semester
-├── doc/                    # LaTeX doc for final paper
-├── etc/                    # Miscellaneous
-├── src/                    # Code + Test Data
-│   ├── bloom_filters       # BF Implementations
-│   └── data                # URL dataset for benchmark
-└── README.md
+    .
+    ├── abstract.md             # Project Abstract
+    ├── journal.md              # Record of progress thru-out semester
+    ├── journal.md              # Record of progress thru-out semester
+    ├── doc/                    # LaTeX doc for final paper
+    ├── etc/                    # Miscellaneous
+    ├── src/                    # Code + Test Data
+    │   ├── bloom_filters       # BF Implementations
+    │   └── data                # URL dataset for benchmark
+    └── README.md
