@@ -8,7 +8,6 @@ This repository contains the code for the final project I submitted for COS 513.
     .
     ├── abstract.md             # Project Abstract
     ├── journal.md              # Record of progress thru-out semester
-    ├── journal.md              # Record of progress thru-out semester
     ├── doc/                    # LaTeX doc for final paper
     ├── etc/                    # Miscellaneous
     ├── src/                    # Code + Test Data
