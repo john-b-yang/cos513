@@ -51,6 +51,24 @@ The purpose of the time is to introduce greater granularity and flexibility when
 python3 adaptive.py --size_of_BF 100000 --data_path ../data/URL_data.csv --c_min 1.6 --c_max 2.5 --group_min 8 --group_max 12
 ```
 
+### Disjoint Adaptive
+Proposed in *Adaptive Learned Bloom Filter (Ada-BF): Efficient Utilization of the Classifier (Dai 2020)*
+> `disjoint.py`
+> * `--size_of_BF`: Size of bloom filter (number of slots)
+> * `--data_path`: Relative path to data to run bloom filter on
+> * `--c_min`: Minimum ratio of the keys
+> * `--c_max`: Maximum ratio of the keys
+> * `--group_min`: Minimum number of groups
+> * `--group_min`: Maximum number of groups
+> * `--model_path`: Path to binary classifier for determining existence
+
+Implementation for disjoint adaptive bloom filter. The approach is very similar to the adaptive bloom filter, where we split the data distribution into `g` groups, and each group has a unique number of hash functions. However, instead of aggregating the hashing results into a single bloom filter, the disjoint implementation puts the resultss into separate, variable-sized bloom filters. This design allows for more firm decision boundaries between different groups, which leads to lower false positive rates.
+
+**Example Run**
+```
+python disjoint.py --data_path ../data/URL_data.csv --size_of_BF 200000 --group_min 8 --group_max 12 --c_min 1.6 --c_max 2.5 --model_path ../models URL_Random_Forest_Model_n_10_leaf_20.pickle
+```
+
 ### References
 * [COS 598D Assignment 4](https://github.com/yushansu/COS598D_Assignment4)
 * [Optimal num of hash functions](https://freecontent.manning.com/all-about-bloom-filters/)
