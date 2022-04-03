@@ -2,7 +2,6 @@ import argparse
 import string
 import numpy as np
 import pandas as pd
-import serialize
 
 # Hashing function
 from random import randint
@@ -92,5 +91,7 @@ if __name__ == '__main__':
   # Get urls of negative samples, test Bloom filter for existence
   query_negative = negative_samples['url']
   fp_test = bloom_filter.test(query_negative)
-  print('Total false positive items:', sum(fp_test))
+  print('Bloom Filter w/ Size', hash_len)
+  print('False positive items:', sum(fp_test))
   print('False positive rate:', (sum(fp_test)*100./len(fp_test)))
+  print('----------')

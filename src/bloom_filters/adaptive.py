@@ -36,7 +36,7 @@ class AdaptiveFilter():
       test_result = 1
     return test_result
 
-def SearchBestFilter(c_min, c_max, group_min, group_max, hash_len, train_negative, positive_samples):
+def search_best_filter(c_min, c_max, group_min, group_max, hash_len, train_negative, positive_samples):
   k_min, c_opt = 0, 0
   FP_opt = train_negative.shape[0]
 
@@ -119,7 +119,8 @@ if __name__ == '__main__':
   train_negative = negative_samples.sample(frac=0.3)
 
   # Search for optimal bloom filter
-  bloom_filter, thresholds, k_max = SearchBestFilter(c_min, c_max, group_min, group_max, hash_len, train_negative, positive_samples)
+  print("Ada-BF w/ Size ", hash_len)
+  bloom_filter, thresholds, k_max = search_best_filter(c_min, c_max, group_min, group_max, hash_len, train_negative, positive_samples)
 
   # Test Queries
   ML_positive = negative_samples.loc[(negative_samples['score'] >= thresholds[-2]), 'url']
@@ -137,6 +138,7 @@ if __name__ == '__main__':
     ss += 1
   
   FP_items = sum(test_result) + len(ML_positive)
-  FPR = FP_items / negative_samples.shape[0]
+  FPR = FP_items * 100 / negative_samples.shape[0]
 
   print("False positive items: {}; FPR: {}; Size of queries: {}".format(FP_items, FPR, negative_samples.shape[0]))
+  print('----------')

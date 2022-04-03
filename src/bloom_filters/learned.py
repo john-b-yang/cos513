@@ -67,6 +67,8 @@ if __name__ == '__main__':
   fps = sum(fp_test) + len(neg_above_t)
   fpr = fps*100./len(negative_samples)
 
-  print('Total false positive items', fps)
+  print('Bloom Filter w/ Size', size)
+  print('False positive items', fps)
   print('False positive rate: ', fpr)
+  print('----------')
 

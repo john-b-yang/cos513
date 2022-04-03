@@ -1,0 +1,36 @@
+Bloom Filter w/ Size 100000
+False positive items 40545.0
+False positive rate:  11.759024823157839
+----------
+Bloom Filter w/ Size 150000
+False positive items 18606.0
+False positive rate:  5.396187343930812
+----------
+Bloom Filter w/ Size 200000
+False positive items 11488.0
+False positive rate:  3.3317962059054698
+----------
+Bloom Filter w/ Size 250000
+False positive items 7719.0
+False positive rate:  2.238695587864234
+----------
+Bloom Filter w/ Size 300000
+False positive items 5419.0
+False positive rate:  1.5716402889799563
+----------
+Bloom Filter w/ Size 350000
+False positive items 3862.0
+False positive rate:  1.1200728540395999
+----------
+Bloom Filter w/ Size 400000
+False positive items 2826.0
+False positive rate:  0.8196079454986819
+----------
+Bloom Filter w/ Size 450000
+False positive items 2111.0
+False positive rate:  0.6122407547585695
+----------
+Bloom Filter w/ Size 500000
+False positive items 1546.0
+False positive rate:  0.44837717046743175
+----------
