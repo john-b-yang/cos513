@@ -1,0 +1,36 @@
+Bloom Filter w/ Size 100000
+Optimal FPs: 34.000000, Optimal c: 2.300000, Optimal num_group: 10
+False positive items: 105.0; FPR: 0.030461712528467193; Size of queries: 344695
+----------
+Bloom Filter w/ Size 150000
+Optimal FPs: 51.000000, Optimal c: 2.000000, Optimal num_group: 12
+False positive items: 165.0; FPR: 0.04786840540187702; Size of queries: 344695
+----------
+Bloom Filter w/ Size 200000
+Optimal FPs: 1254.000000, Optimal c: 2.000000, Optimal num_group: 12
+False positive items: 4114.0; FPR: 1.1935189080201337; Size of queries: 344695
+----------
+Bloom Filter w/ Size 250000
+Optimal FPs: 43821.000000, Optimal c: 2.300000, Optimal num_group: 12
+False positive items: 146086.0; FPR: 42.381235585082466; Size of queries: 344695
+----------
+Bloom Filter w/ Size 300000
+Optimal FPs: 22826.000000, Optimal c: 1.600000, Optimal num_group: 11
+False positive items: 75952.0; FPR: 22.100913693767096; Size of queries: 343660
+----------
+Bloom Filter w/ Size 350000
+Optimal FPs: 8352.000000, Optimal c: 1.600000, Optimal num_group: 12
+False positive items: 27774.0; FPR: 8.07203038854675; Size of queries: 344077
+----------
+Bloom Filter w/ Size 400000
+Optimal FPs: 4197.000000, Optimal c: 1.800000, Optimal num_group: 11
+False positive items: 13906.0; FPR: 4.038039927404719; Size of queries: 344375
+----------
+Bloom Filter w/ Size 450000
+Optimal FPs: 2247.000000, Optimal c: 1.900000, Optimal num_group: 9
+False positive items: 7876.0; FPR: 2.2906935484809177; Size of queries: 343826
+----------
+Bloom Filter w/ Size 500000
+Optimal FPs: 1333.000000, Optimal c: 1.700000, Optimal num_group: 11
+False positive items: 4582.0; FPR: 1.3316360930924647; Size of queries: 344088
+----------

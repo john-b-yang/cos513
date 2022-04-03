@@ -116,7 +116,6 @@ def search_best_filter(c_min, c_max, group_min, group_max, hash_len, train_negat
   return Bloom_Filters_opt, thresholds_opt, non_empty_ix_opt
 
 if __name__ == '__main__':
-  print('Bloom Filter w/ Size', hash_len)
   results = parser.parse_args()
   DATA_PATH, hash_len = results.data_path, results.hash_len
   c_min, c_max, group_min, group_max = results.c_min, results.c_max, results.group_min, results.group_max
@@ -135,6 +134,7 @@ if __name__ == '__main__':
   train_negative = negative_samples.sample(frac=0.3)
 
   # Search for optimal bloom filter configuration
+  print('Bloom Filter w/ Size', hash_len)
   Bloom_Filters_opt, thresholds_opt, non_empty_ix_opt = search_best_filter(c_min, c_max, group_min, group_max, R_sum, train_negative, positive_samples)
 
   ### Test queries
@@ -151,6 +151,6 @@ if __name__ == '__main__':
           test_result[ss] = 0
       ss += 1
   FP_items = sum(test_result) + len(ML_positive)
-  FPR = FP_items/len(query_negative)
+  FPR = FP_items * 100./len(query_negative)
   print('False positive items: {}; FPR: {}; Size of queries: {}'.format(FP_items, FPR, len(query_negative)))
   print('----------')
