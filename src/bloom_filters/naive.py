@@ -53,7 +53,15 @@ class BloomFilter():
         self.table[t] = 1
   
   # Check if key(s) exist
-  def test(self, keys):
+  def test(self, keys, single_key=False):
+    # Test for single key that is passed in
+    if single_key:
+      num_matches = 0
+      for j in range(self.k):
+        t = self.h[j](keys)
+        num_matches += ((self.table[t] == 1) * 1)
+      return 1 if num_matches == self.k else 0
+    
     # Create results list, counter
     results, i = np.zeros(len(keys)), 0
 
