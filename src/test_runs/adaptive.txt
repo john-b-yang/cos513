@@ -1,36 +1,36 @@
 Ada-BF w/ Size  100000
-Optimal FPs: 7366.000000, Optimal c: 1.600000, Optimal num_group: 8
-False positive items: 24503.0; FPR: 7.1064591254615; Size of queries: 344799
+Optimal FPs: 7516.000000, Optimal c: 1.600000, Optimal num_group: 8
+False positive items: 24680.0; FPR: 0.07157793381071291; Size of queries: 344799
 ----------
 Ada-BF w/ Size  150000
-Optimal FPs: 3256.000000, Optimal c: 1.600000, Optimal num_group: 8
-False positive items: 10882.0; FPR: 3.156041635851612; Size of queries: 344799
+Optimal FPs: 3281.000000, Optimal c: 1.600000, Optimal num_group: 8
+False positive items: 10928.0; FPR: 0.03169382741829298; Size of queries: 344799
 ----------
 Ada-BF w/ Size  200000
-Optimal FPs: 1819.000000, Optimal c: 1.600000, Optimal num_group: 10
-False positive items: 6111.0; FPR: 1.7723369267312262; Size of queries: 344799
+Optimal FPs: 1797.000000, Optimal c: 1.600000, Optimal num_group: 10
+False positive items: 6005.0; FPR: 0.017415943781739506; Size of queries: 344799
 ----------
 Ada-BF w/ Size  250000
-Optimal FPs: 1079.000000, Optimal c: 1.600000, Optimal num_group: 11
-False positive items: 3727.0; FPR: 1.0809196082355227; Size of queries: 344799
+Optimal FPs: 1080.000000, Optimal c: 1.600000, Optimal num_group: 11
+False positive items: 3697.0; FPR: 0.010722188869457278; Size of queries: 344799
 ----------
 Ada-BF w/ Size  300000
-Optimal FPs: 696.000000, Optimal c: 1.700000, Optimal num_group: 12
-False positive items: 2381.0; FPR: 0.6905472463667238; Size of queries: 344799
+Optimal FPs: 668.000000, Optimal c: 1.700000, Optimal num_group: 11
+False positive items: 2351.0; FPR: 0.006818465250769289; Size of queries: 344799
 ----------
 Ada-BF w/ Size  350000
-Optimal FPs: 426.000000, Optimal c: 1.800000, Optimal num_group: 11
-False positive items: 1448.0; FPR: 0.4199548142541016; Size of queries: 344799
+Optimal FPs: 426.000000, Optimal c: 1.700000, Optimal num_group: 12
+False positive items: 1533.0; FPR: 0.004446068579085206; Size of queries: 344799
 ----------
 Ada-BF w/ Size  400000
-Optimal FPs: 287.000000, Optimal c: 2.200000, Optimal num_group: 9
-False positive items: 1064.0; FPR: 0.30858558174472663; Size of queries: 344799
+Optimal FPs: 301.000000, Optimal c: 2.100000, Optimal num_group: 10
+False positive items: 1037.0; FPR: 0.003007549325839112; Size of queries: 344799
 ----------
 Ada-BF w/ Size  450000
-Optimal FPs: 193.000000, Optimal c: 1.900000, Optimal num_group: 12
-False positive items: 682.0; FPR: 0.19779639732133794; Size of queries: 344799
+Optimal FPs: 183.000000, Optimal c: 2.400000, Optimal num_group: 9
+False positive items: 697.0; FPR: 0.002021467579662354; Size of queries: 344799
 ----------
 Ada-BF w/ Size  500000
-Optimal FPs: 133.000000, Optimal c: 2.200000, Optimal num_group: 12
-False positive items: 490.0; FPR: 0.14211178106665041; Size of queries: 344799
+Optimal FPs: 148.000000, Optimal c: 2.200000, Optimal num_group: 11
+False positive items: 490.0; FPR: 0.0014211178106665041; Size of queries: 344799
 ----------
