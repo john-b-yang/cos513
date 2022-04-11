@@ -12,19 +12,19 @@ False positive items: 4582.0; FPR: 0.01328890164; Size of queries: 344799
 ----------
 Bloom Filter w/ Size 250000
 Optimal FPs: 1254.000000, Optimal c: 2.000000, Optimal num_group: 12
-False positive items: 4114.0; FPR: 0.01193158912; Size of queries: 344799
+False positive items: 3132.0; FPR: 0.00908274415; Size of queries: 344799
 ----------
 Bloom Filter w/ Size 300000
 Optimal FPs: 723.000000, Optimal c: 1.700000, Optimal num_group: 11
-False positive items: 4582.0; FPR: 0.00209687383; Size of queries: 344799
+False positive items: 723.0; FPR: 0.00209687383; Size of queries: 344799
 ----------
 Bloom Filter w/ Size 350000
 Optimal FPs: 218.000000, Optimal c: 1.700000, Optimal num_group: 11
-False positive items: 4582.0; FPR: 0.00063225241; Size of queries: 344799
+False positive items: 218.0; FPR: 0.00063225241; Size of queries: 344799
 ----------
 Bloom Filter w/ Size 400000
 Optimal FPs: 137.000000, Optimal c: 1.700000, Optimal num_group: 11
-False positive items: 4582.0; FPR: 0.00039733293; Size of queries: 344799
+False positive items: 137.0; FPR: 0.00039733293; Size of queries: 344799
 ----------
 Bloom Filter w/ Size 450000
 Optimal FPs: 51.000000, Optimal c: 2.000000, Optimal num_group: 12
