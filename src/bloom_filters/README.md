@@ -30,6 +30,16 @@ Implementation for learned bloom filter. The implementation accounts for the `sc
 python3 learned.py --size_of_BF 100000 --data_path ../data/URL_data.csv --thres_max 0.95 --thres_min 0.05
 ```
 
+### Sandwich
+Proposed in *A Model for Learned Bloom Filters, and Optimizing by Sandwiching (Mitzenmacher 2018)*
+
+Implementation for sandwiched bloom filter. This implementation takes after the learned bloom filter, but appends an additional naive bloom filter to the front of the learned bloom filter pipeline. The initial bloom filter, coming before the classifier, has the responsibility of filtering out definitive true negatives to reduce the number of possible false negatives that the classifier might generate. The set of parameters is quite similar, with the exception that instead of a max/min threshold, the code takes in a thresholds quantile argument instead that tests thresholds divided into `thresholds_q` uniform ranges from 0 to 1.
+
+**Example Run**
+```
+python3 sandwich.py --size_of_BF 10000 --data_path ../data/URL_data.csv --thresholds_q 10
+```
+
 ### Adaptive
 Proposed in *Adaptive Learned Bloom Filter (Ada-BF): Efficient Utilization of the Classifier (Dai 2020)*
 > `adaptive.py`
@@ -70,7 +80,6 @@ python disjoint.py --data_path ../data/URL_data.csv --size_of_BF 200000 --group_
 ```
 
 ### References
-* [COS 598D Assignment 4](https://github.com/yushansu/COS598D_Assignment4)
 * [Optimal num of hash functions](https://freecontent.manning.com/all-about-bloom-filters/)
 * [The Case for Learned Index Structures](https://arxiv.org/abs/1712.01208)
 * [Adaptive Learned Bloom Filter](https://openreview.net/pdf?id=rJlNKCNtPB)
