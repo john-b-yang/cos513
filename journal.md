@@ -1,5 +1,8 @@
 # Journal
 
+**April 16, 2022**
+Finished a first draft of the final report! The commit today includes mainly code for generating the figures and numbers that were used in the final paper. Before the paper is due on 5/8, I will likely revisit this paper and make some edits after reading it. Length wise, it seems like it's in a good place at exactly six pages with figures included. The next order of business would be the presentation. If there's additional time, I may think about generating new figures, but at this point, I feel like I've pretty much exhausted all of the worthwhile insights that immediatly came to mind. At this point, because of other class and research commitments, I don't think I'll have time to do any more technical work.
+
 **April 11, 2022**
 Was able to put together a Random Forest classifier for determining whether URLs are malicious or not based on hand engineered features that were determined from looking at the relative distributions of those features when comparing between the malicious and benign URL data. From this, I was able to visualize the most effective decision points for determining which factors influenced the outcome label the most, along with a `.pkl` file for integrating into the existing bloom filter code base. This step was not particularly difficult, as I just replaced the `score` retrieval code in the bloom filters with a prediction call to the `.pkl` file instead that generated both a label and confidence score.
 
