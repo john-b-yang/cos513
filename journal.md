@@ -1,4 +1,6 @@
 # Journal
+**April 23, 2022**
+Just about ready to wrap up the project - I took some time to move the final paper content over the NeurIPS format required by the class. In the process, I had to recreate a couple of diagrams and decided to add a couple new ones. I will do one more final, proofreading read through a week from now, which will be a couple days before the Dean's date deadline.
 
 **April 16, 2022**
 Finished a first draft of the final report! The commit today includes mainly code for generating the figures and numbers that were used in the final paper. Before the paper is due on 5/8, I will likely revisit this paper and make some edits after reading it. Length wise, it seems like it's in a good place at exactly six pages with figures included. The next order of business would be the presentation. If there's additional time, I may think about generating new figures, but at this point, I feel like I've pretty much exhausted all of the worthwhile insights that immediatly came to mind. At this point, because of other class and research commitments, I don't think I'll have time to do any more technical work.
